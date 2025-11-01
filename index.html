@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>World Monument Quest</title>
+    <!-- 
+    World Monument Quest: Rebuild famous world monuments by dragging and rotating puzzle pieces.
+    Features progressive difficulty, hints, scoring system, and works on both desktop and mobile.
+    -->
+    
+<link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="canvas"></canvas>
+        
+        <div class="overlay" id="overlay"></div>
+        
+        <div class="hud">
+            <div class="hud-item">Level: <span id="level">1</span></div>
+            <div class="hud-item">Score: <span id="score">0</span></div>
+            <div class="hud-item">Moves: <span id="moves">0</span></div>
+            <div class="hud-item">Hints: <span id="hints">3</span></div>
+        </div>
+
+        <div class="instruction" id="instruction">
+            Drag pieces to rebuild the monument. Tap rotate button or double-tap piece to rotate.
+        </div>
+
+        <button class="rotate-btn" id="rotateBtn">↻</button>
+
+        <div class="controls">
+            <button class="btn" id="hintBtn">💡 Hint</button>
+            <button class="btn" id="restartBtn">🔄 Restart</button>
+            <button class="btn" id="soundBtn">🔊</button>
+        </div>
+
+        <div class="modal" id="completeModal">
+            <h2>🎉 Level Complete!</h2>
+            <p id="completeText"></p>
+            <p>Score: <span id="modalScore">0</span></p>
+            <button class="btn btn-primary" id="nextBtn">Next Level</button>
+        </div>
+
+        <div class="modal" id="gameOverModal">
+            <h2>🏆 All Monuments Restored!</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button class="btn btn-primary" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>  
+
+</body>
+</html>
